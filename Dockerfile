@@ -44,6 +44,8 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         ca-certificates \
         iproute2 \
+        iptables \
+        bridge-utils \
         iputils-ping \
         net-tools \
         tcpdump \
@@ -55,6 +57,7 @@ RUN apt-get update && \
         dnsutils \
         traceroute \
         ethtool \
+        conntrack \
         procps \
         psmisc \
         lsof \
