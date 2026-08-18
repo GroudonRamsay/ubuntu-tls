@@ -74,6 +74,8 @@ RUN apt-get update && \
 # ------------------------------------------------------------
 COPY --from=openssl-builder /opt/openssl /opt/openssl
 
+RUN mkdir -p /opt/openssl/ssl && \
+    cp /etc/ssl/openssl.cnf /opt/openssl/ssl/openssl.cnf
 
 # ------------------------------------------------------------
 # Use custom OpenSSL by default
